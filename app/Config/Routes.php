@@ -38,6 +38,8 @@ $routes->get('/', 'Home::index');
 $routes->group('dashboard', ['filter' => 'session'], function ($routes) {
   $routes->get('/', 'Dashboard::index', ['as' => 'dashboard-index']);
   $routes->post('process_update', 'Dashboard::update', ['as' => 'dashboard-update']);
+  $routes->get('change-password', 'Dashboard::change_password', ['as' => 'dashboard-change-password']);
+  $routes->post('proses-change-password', 'Dashboard::process_change_password', ['as' => 'dashboard-proses-change-password']);
 });
 service('auth')->routes($routes);
 // $routes->get('/dashboard/(:segment)', 'About::index/$1');

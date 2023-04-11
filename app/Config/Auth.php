@@ -407,7 +407,8 @@ class Auth extends ShieldAuth
    */
   public function logoutRedirect(): string
   {
-    $url = setting('Auth.redirects')['logout'];
+    // $url = setting('Auth.redirects')['logout'];
+    $url = '/';
 
     return $this->getUrl($url);
   }
@@ -418,7 +419,8 @@ class Auth extends ShieldAuth
    */
   public function registerRedirect(): string
   {
-    $url = setting('Auth.redirects')['register'];
+    // $url = setting('Auth.redirects')['register'];
+    $url = '/login';
 
     return $this->getUrl($url);
   }
